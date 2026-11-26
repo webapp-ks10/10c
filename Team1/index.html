@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortrag: Der gläserne Mensch</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e293b, #090d16);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <h1>Der gläserne Mensch</h1>
+        <p>Wie Daten über uns gesammelt werden und was das bedeutet</p>
+    </header>
+
+    <!-- Folie 1 -->
+    <section>
+        <h2>1. Einleitung: Wer bin ich und was weiß das Netz?</h2>
+        <p>Stell dir vor, du gehst morgens aus dem Haus und hinterlässt bei jedem Schritt eine unsichtbare Farbspur. Genau das machen wir im digitalen Alltag ständig mit unseren Daten.</p>
+        <div class="highlight-box">
+            <strong>Leitfrage:</strong> Was wissen Unternehmen, Plattformen und Apps eigentlich über uns – oft ohne dass wir es überhaupt merken?
+        </div>
+    </section>
+
+    <!-- Folie 2 -->
+    <section>
+        <h2>2. Welche Arten von Daten werden gesammelt?</h2>
+        <div class="grid">
+            <div>
+                <h3>Standortdaten</h3>
+                <p>GPS, WLAN-Netzwerke in der Umgebung und Bluetooth verraten genau, wo du dich aufhältst, wann du zur Schule gehst und wo du deine Freizeit verbringst.</p>
+            </div>
+            <div>
+                <h3>Verhaltensdaten</h3>
+                <p>Wie lange schaust du dir ein TikTok-Video an? Welche Posts likest du? Welche Wörter tippst du in Suchmaschinen ein?</p>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <h3>Vorlieben & Profiling</h3>
+            <p>Aus all diesen Daten erstellen Algorithmen ein Profil: Was interessiert dich? Welche Musik magst du? Welches politische oder gesundheitliche Interesse hast du?</p>
+        </div>
+    </section>
+
+    <!-- Folie 3 -->
+    <section>
+        <h2>3. Wer sammelt diese Daten und warum?</h2>
+        <ul>
+            <li><strong>Werbetreibende & Social-Media-Konzerne:</strong> Plattformen wie Instagram, TikTok oder Google verdienen ihr Geld mit personalisierter Werbung. Je besser sie dich kennen, desto teurer können sie Werbeplätze verkaufen.</li>
+            <li><strong>App-Entwickler:</strong> Viele Gratis-Apps finanzieren sich im Hintergrund durch den Datenverkauf an Drittanbieter.</li>
+            <li><strong>Das Prinzip:</strong> Wenn ein Produkt kostenlos ist (wie eine App), bist du oft nicht der Kunde, sondern das Produkt.</li>
+        </ul>
+    </section>
+
+    <!-- Folie 4 -->
+    <section>
+        <h2>4. Technik-Check: Wie funktioniert Datensammlung?</h2>
+        <ul>
+            <li><strong>Cookies:</strong> Kleine Textdateien, die Webseiten auf deinem Gerät speichern, um dein Surfverhalten über mehrere Seiten hinweg zu verfolgen.</li>
+            <li><strong>Tracking:</strong> Die Verfolgung deines digitalen Weges von App zu App oder Website zu Website.</li>
+            <li><strong>App-Berechtigungen:</strong> Wenn eine Taschenlampe-App Zugriff auf deine Kontakte und deinen Standort verlangt, läuft etwas schief.</li>
+        </ul>
+    </section>
+
+    <!-- Folie 5 -->
+    <section>
+        <h2>5. Konsequenzen: Warum ist das wichtig für mich?</h2>
+        <p><strong>Bewerten & Begründen:</strong> Die Datensammlung hat nicht nur Vorteile (wie maßgeschneiderte Empfehlungen), sondern auch Schattenseiten:</p>
+        <ul>
+            <li><strong>Filterblasen:</strong> Du siehst im Netz nur noch das, was deine Meinung bestätigt oder dein Konsumverhalten anregt.</li>
+            <li><strong>Manipulation:</strong> Gezielte Werbung kann dein Kaufverhalten oder sogar deine politische Haltung beeinflussen.</li>
+            <li><strong>Preisdiskriminierung:</strong> Manchmal werden Tickets oder Produkte für bestimmte Nutzer teurer angezeigt, weil der Algorithmus weiß, dass sie es sich leisten können.</li>
+        </ul>
+    </section>
+
+    <!-- Folie 6 -->
+    <section>
+        <h2>6. Tipps zum Schutz deiner Daten</h2>
+        <p>Du bist dem Ganzen nicht schutzlos ausgeliefert! Hier sind konkrete Schritte:</p>
+        <ul>
+            <li><strong>Berechtigungen prüfen:</strong> Schau in den Einstellungen deines Smartphones nach, welche App wirklich Zugriff auf Kamera, Mikrofon oder Standort braucht.</li>
+            <li><strong>Browser & Suchmaschinenwahl:</strong> Nutze datenschutzfreundliche Alternativen (z. B. Firefox, DuckDuckGo oder Brave).</li>
+            <li><strong>Tracking blockieren:</strong> Cookies regelmäßig löschen und Werbe-Tracker blockieren.</li>
+            <li><strong>Zweimal überlegen:</strong> Nicht jede Umfrage mitmachen, nicht jedem Cookie-Banner blind „Alle akzeptieren“ anklicken.</li>
+        </ul>
+    </section>
+
+    <div class="footer-note">
+        <p>Vortrag erstellt für den Kompetenzschwerpunkt: Bewerten, Begründen, Darstellen & Interpretieren.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

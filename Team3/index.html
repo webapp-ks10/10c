@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybermobbing – Digitale Gewalt erkennen und handeln</title>
+    <style>
+        :root {
+            --primary-dark: #1b263b;
+            --accent-green: #2d6a4f;
+            --bg-light: #f8f9fa;
+            --card-white: #ffffff;
+            --text-main: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: white;
+            text-align: center;
+            padding: 3.5rem 1rem;
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-white);
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1d3557;
+            border-bottom: 3px solid #457b9d;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .danger-card {
+            background: #2b2d42;
+            color: #edf2f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 6px solid #d90429;
+        }
+
+        .danger-card h3 {
+            color: #ff4d6d;
+            margin-top: 0;
+        }
+
+        .success-card {
+            background: #e8f5e9;
+            color: #1b4332;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 6px solid var(--accent-green);
+        }
+
+        .success-card h3 {
+            color: var(--accent-green);
+            margin-top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        /* Fallbeispiel-Box */
+        .case-box {
+            background: #fff3e0;
+            border-left: 6px solid #fb8c00;
+            color: #4e342e;
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .case-box h3 {
+            color: #e65100;
+            margin-top: 0;
+        }
+
+        /* Interview-Box */
+        .interview-box {
+            background: #1f2022;
+            color: #cfd8dc;
+            border-left: 6px solid #ef476f;
+            padding: 1.8rem;
+            border-radius: 8px;
+            font-style: italic;
+            margin: 1.5rem 0;
+        }
+
+        .interview-box span {
+            display: block;
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .help-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .help-list li {
+            background: #f1faee;
+            border: 1px solid #a8dadc;
+            margin-bottom: 0.8rem;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #1d3557;
+        }
+
+        .help-list span {
+            font-weight: normal;
+            display: block;
+            font-size: 0.95rem;
+            color: #457b9d;
+            margin-top: 0.3rem;
+        }
+
+        .sources {
+            background: #f1f3f5;
+            font-size: 0.9rem;
+        }
+
+        .sources ul {
+            padding-left: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .sources li {
+            margin-bottom: 0.4rem;
+            color: #495057;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #1d3557;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cybermobbing</h1>
+        <p>Digitale Gewalt erkennen und handeln – Konflikte im Netz lösen</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Sektion 1: Was ist Cybermobbing? -->
+        <section>
+            <h2>Was ist Cybermobbing? (Definition & Formen)</h2>
+            <p>Cybermobbing beschreibt das gezielte Beleidigen, Bloßstellen, Bedrohen oder Belästigen von Personen über digitale Medien – wie Smartphones, Social-Media-Apps (Instagram, TikTok, Snapchat), Online-Spiele oder Chatgruppen. Anders als klassisches Mobbing auf dem Pausenhof hat Cybermobbing verheerende Eigenschaften: Es findet rund um die Uhr statt, die Inhalte sind extrem schnell vervielfältigt und für ein potenziell weltweites Publikum dauerhaft sichtbar.</p>
+            
+            <div class="image-container">
+                <img src="https://bbs-peine.de/wp-content/uploads/2024/02/cybermobbing-990x500.webp" alt="Cybermobbing Symbolbild">
+            </div>
+
+            <div class="grid">
+                <div class="danger-card">
+                    <h3>Häufige Formen (Die dunkle Seite)</h3>
+                    <p>• Versenden verleumderischer Gerüchte in Klassen-Chats<br>
+- Veröffentlichung bearbeiteter, peinlicher Fotos oder Videos ohne Einwilligung<br>
+- Erstellung falscher Fake-Profile im Namen des Opfers<br>
+- Ausgrenzung und systematischer Ausschluss aus digitalen Gruppen</p>
+                </div>
+                <div class="danger-card">
+                    <h3>Typische Plattformen</h3>
+                    <p>Besonders betroffen sind geschlossene Messenger-Gruppen (WhatsApp/Snapchat), öffentliche Videoplattformen (TikTok) sowie anonyme Fragen- und Kommentar-Portale, auf denen Hemmungen im Netz oft komplett wegfallen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion 1.1: Konkretes Fallbeispiel (NEU) -->
+        <section>
+            <h2>Fallbeispiel: Wie eine digitale Eskalation beginnt</h2>
+            <p>Um die Dynamik von digitaler Gewalt zu verstehen, hilft ein typischer Blick in den Alltag:</p>
+            
+            <div class="case-box">
+                <h3>Szenario aus dem Schulalltag</h3>
+                <p>In einer WhatsApp-Klassenstufe mit über 60 Mitgliedern postet ein Mitschüler ein unvorteilhaftes Foto von Leonie (14), das in der Umkleidekabine aufgenommen wurde. Innerhalb von Minuten reagieren andere mit lachenden Emojis und verletzenden Kommentaren wie <em>„Wie sieht die denn aus?“</em> oder <em>„Selbst Schuld“</em>. Als Leonie im Chat darum bittet, das Bild zu löschen, wird sie gesperrt, und das Bild wird auf TikTok weiterverbreitet. Leonie traut sich am nächsten Tag kaum noch in die Schule.</p>
+            </div>
+            <p><strong>Analyse:</strong> Hier greifen die Kompetenzbereiche <em>Kommunizieren & Kooperieren</em> sowie <em>Soziale Verantwortung</em> direkt ein. Wegschauen oder Liken macht Mitwissende zu Mitläutern, während Zivilcourage das Stoppsignal setzen kann.</p>
+        </section>
+
+        <!-- Sektion 2: Wie fühlt sich das an? (Interview) -->
+        <section>
+            <h2>Wie fühlt es sich für Betroffene an?</h2>
+            <p>Die psychischen und emotionalen Folgen von digitaler Gewalt sind extrem belastend. Die Opfer verlieren das Gefühl von Sicherheit – selbst in den eigenen vier Wänden, da das Smartphone ständiger Begleiter ist.</p>
+            
+            <div class="interview-box">
+                "Am Anfang dachte ich, es hört nach ein paar Tagen auf. Aber die fiesen Kommentare wurden immer mehr. Sobald ich das Handy in die Hand nahm, zitterte ich. Nachts konnte ich nicht mehr schlafen, weil ich Angst vor den Benachrichtigungen hatte. Ich fühlte mich komplett allein und wusste nicht, wem ich noch vertrauen konnte."
+                <span>– Fiktives Interview mit einer Betroffenen (15 Jahre)</span>
+            </div>
+        </section>
+
+        <!-- Sektion 3: Was kann man tun? (Handeln) -->
+        <section>
+            <h2>Was kann man tun? – Wege aus der Krise</h2>
+            <p>Zivilcourage und schnelles Handeln können die Dynamik stoppen. Hier wird es wieder lösungsorientierter und konstruktiver:</p>
+            
+            <div class="grid">
+                <div class="success-card">
+                    <h3>Für Betroffene (Hilfreiche Schritte)</h3>
+                    <p><strong>1. Nicht zurückschreiben:</strong> Keine Reaktionen zeigen, die Täter suchen genau das.<br>
+                    <strong>2. Beweise sichern:</strong> Machen Sie Screenshots von allen Nachrichten, Profilen und URLs.<br>
+                    <strong>3. Blockieren & Melden:</strong> Nutzen Sie die Melde-Funktionen der Apps.<br>
+                    <strong>4. Vertrauen:</strong> Sprechen Sie unbedingt mit Eltern, Lehrkräften oder Freunden.</p>
+                </div>
+                <div class="success-card">
+                    <h3>Für Freunde & Zuschauer (Zivilcourage)</h3>
+                    <p><strong>1. Kein Mitläufer sein:</strong> Postings niemals liken, kommentieren oder weiterleiten.<br>
+                    <strong>2. Partei ergreifen:</strong> Suchen Sie das Gespräch mit dem Opfer und zeigen Sie Rückhalt.<br>
+                    <strong>3. Täter konfrontieren:</strong> Machen Sie klar, dass dieses Verhalten inakzeptabel ist (oder holen Sie direkt Hilfe).</p>
+                </div>
+            </div>
+
+            <div class="image-container" style="margin-top: 2rem;">
+                <img src="https://www.gesine-intervention.de/wp-content/uploads/Cybermobbing-2048x1152.jpeg" alt="Cybermobbing Aufklärung und Hilfe">
+            </div>
+        </section>
+
+        <!-- Sektion 4: Hilfsangebote -->
+        <section>
+            <h2>Hilfsangebote & Anlaufstellen</h2>
+            <p>Niemand muss diesen Weg alleine gehen. Es gibt professionelle Stellen, die anonym, kostenfrei und schnell helfen:</p>
+            <ul class="help-list">
+                <li>
+                    Nummer gegen Kummer (Kinder- und Jugendtelefon)
+                    <span>Telefon: 116 111 (Montag bis Samstag von 14 bis 20 Uhr, kostenfrei und anonym)</span>
+                </li>
+                <li>
+                    JuuuIct / Cybermobbing-Hilfe e.V.
+                    <span>Spezialisierte Online-Beratung für Jugendliche, Lehrkräfte und Eltern bei digitaler Gewalt.</span>
+                </li>
+                <li>
+                    Schulsozialarbeit & Vertrauenslehrkräfte
+                    <span>Direkte Ansprechpersonen vor Ort in der Schule für schnelle Krisenintervention.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Quellen-Sektion -->
+        <section class="sources">
+            <h2>Quellenverzeichnis</h2>
+            <p>Für die Erstellung dieser Website und der fachlichen Inhalte wurden folgende Quellen herangezogen:</p>
+            <ul>
+                <li>Nummer gegen Kummer e.V. – Informationen zum Schutz vor Cybermobbing.</li>
+                <li>Klicksafe.de – EU-Initiative für mehr Sicherheit im Netz (Themenschwerpunkt Cybermobbing).</li>
+                <li>Gesine Intervention – Fachstelle gegen Häusliche und Digitale Gewalt (<a href="https://www.gesine-intervention.de" target="_blank">gesine-intervention.de</a>).</li>
+                <li>BBS Peine – Bildungs- und Informationsmaterialien zu digitalen Medien (<a href="https://bbs-peine.de" target="_blank">bbs-peine.de</a>).</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kompetenzschwerpunkt: Kommunizieren & Kooperieren, Soziale Verantwortung & Darstellen</p>
+    </footer>
+
+</body>
+</html>
