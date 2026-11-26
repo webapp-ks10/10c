@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passwortsicherheit | Schütze dein digitales Leben</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+    line-height: 1.7;
+}
+
+header {
+    background: #111c32;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #263650;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #102344, #172554, #0b1120);
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: #0284c7;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #17243a;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #293b57;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.danger {
+    border-left: 4px solid #ef4444;
+}
+
+.safe {
+    border-left: 4px solid #22c55e;
+}
+
+.highlight {
+    background: #111c32;
+}
+
+.example {
+    background: #17243a;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.bad {
+    color: #f87171;
+    font-weight: bold;
+}
+
+.good {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.tool-box {
+    background: #17243a;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 650px;
+    margin: auto;
+    border: 1px solid #334b69;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    background: #0b1120;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+#result {
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.bar {
+    height: 9px;
+    background: #334155;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+#strength {
+    height: 100%;
+    width: 0%;
+    transition: 0.3s;
+}
+
+footer {
+    text-align: center;
+    background: #070c17;
+    padding: 30px;
+    color: #94a3b8;
+}
+
+ul {
+    padding-left: 22px;
+    color: #cbd5e1;
+}
+
+li {
+    margin: 8px 0;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🔐 PasswortSicher</div>
+    <nav>
+        <a href="#grundlagen">Grundlagen</a>
+        <a href="#fehler">Fehler</a>
+        <a href="#diebstahl">Diebstahl</a>
+        <a href="#schutz">Schutz</a>
+        <a href="#check">Passwort-Check</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Schütze dein <span>digitales Leben!</span></h1>
+    <p>
+        Passwörter sind der Schlüssel zu unserem digitalen Leben.
+        Erfahre, wie du sichere Passwörter erstellst, dich vor
+        Cyberkriminalität schützt und deine Daten sicherst.
+    </p>
+    <a href="#grundlagen" class="btn">Jetzt mehr erfahren ↓</a>
+</div>
+
+<section id="grundlagen">
+    <h2 class="section-title">🔑 Was macht ein gutes Passwort aus?</h2>
+    <p class="subtitle">Ein starkes Passwort ist deine erste Verteidigungslinie.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">📏</div>
+            <h3>Länge</h3>
+            <p>Ein Passwort sollte möglichst lang sein. Empfehlenswert sind mindestens 15 Zeichen.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔀</div>
+            <h3>Vielfalt</h3>
+            <p>Verwende unterschiedliche Zeichenarten, Wörter und Zahlen. Vermeide einfache Muster.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎲</div>
+            <h3>Zufälligkeit</h3>
+            <p>Nutze keine Namen, Geburtstage oder leicht zu erratenden Informationen.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">♻️</div>
+            <h3>Einzigartigkeit</h3>
+            <p>Verwende für jeden Account ein eigenes Passwort. So bleiben andere Konten geschützt.</p>
+        </div>
+    </div>
+</section>
+
+<section id="fehler" class="highlight">
+    <h2 class="section-title">❌ Typische Passwortfehler</h2>
+    <p class="subtitle">Diese Fehler machen es Angreifern besonders leicht.</p>
+
+    <div class="cards">
+        <div class="card danger">
+            <h3>123456</h3>
+            <p>Sehr einfach und schnell zu erraten.</p>
+        </div>
+
+        <div class="card danger">
+            <h3>Passwort123</h3>
+            <p>Ein häufig verwendetes Muster ohne ausreichende Sicherheit.</p>
+        </div>
+
+        <div class="card danger">
+            <h3>Geburtsdatum</h3>
+            <p>Persönliche Informationen können oft leicht herausgefunden werden.</p>
+        </div>
+
+        <div class="card danger">
+            <h3>Gleiches Passwort</h3>
+            <p>Wird ein Konto gehackt, können auch andere Konten gefährdet sein.</p>
+        </div>
+    </div>
+
+    <div class="example">
+        <p class="bad">❌ Unsicher: Max2008</p>
+        <p class="good">✓ Besser: Ein langer, zufällig erzeugter Passwortsatz</p>
+    </div>
+</section>
+
+<section id="diebstahl">
+    <h2 class="section-title">🕵️ Wie funktioniert Passwortdiebstahl?</h2>
+    <p class="subtitle">Cyberkriminelle nutzen verschiedene Methoden, um Zugangsdaten zu stehlen.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">🎣</div>
+            <h3>Phishing</h3>
+            <p>Gefälschte E-Mails oder Webseiten geben sich als echte Anbieter aus. Nutzer werden dazu gebracht, ihre Zugangsdaten preiszugeben.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Brute Force</h3>
+            <p>Ein Angreifer versucht automatisiert viele mögliche Passwortkombinationen. Lange und zufällige Passwörter erschweren dies erheblich.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦠</div>
+            <h3>Schadsoftware</h3>
+            <p>Schädliche Programme können Tastatureingaben oder gespeicherte Zugangsdaten ausspähen.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📂</div>
+            <h3>Datenlecks</h3>
+            <p>Bei Angriffen auf Unternehmen können gespeicherte Zugangsdaten in fremde Hände gelangen.</p>
+        </div>
+    </div>
+</section>
+
+<section id="schutz" class="highlight">
+    <h2 class="section-title">🛡️ Wie kannst du dich schützen?</h2>
+    <p class="subtitle">Mit diesen Strategien erhöhst du deine digitale Sicherheit.</p>
+
+    <div class="cards">
+        <div class="card safe">
+            <div class="icon">🔐</div>
+            <h3>Passwortmanager</h3>
+            <p>Ein Passwortmanager erstellt und speichert sichere, einzigartige Passwörter. Du musst dir nur ein starkes Master-Passwort merken.</p>
+        </div>
+
+        <div class="card safe">
+            <div class="icon">📱</div>
+            <h3>Zwei-Faktor-Authentifizierung</h3>
+            <p>Zusätzlich zum Passwort benötigst du einen zweiten Nachweis, beispielsweise einen Sicherheitsschlüssel oder eine Authenticator-App.</p>
+        </div>
+
+        <div class="card safe">
+            <div class="icon">🔄</div>
+            <h3>Konten überprüfen</h3>
+            <p>Kontrolliere regelmäßig deine Konten und ändere Passwörter, wenn sie gestohlen wurden oder kompromittiert sein könnten.</p>
+        </div>
+
+        <div class="card safe">
+            <div class="icon">🔍</div>
+            <h3>Links überprüfen</h3>
+            <p>Prüfe die Internetadresse und sei vorsichtig bei unerwarteten Nachrichten und Anhängen.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">🧰 Hilfreiche Tools</h2>
+    <p class="subtitle">Diese Programme können dir bei deiner Passwortsicherheit helfen.</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Bitwarden</h3>
+            <p>Ein Passwortmanager zum sicheren Speichern und Erstellen von Passwörtern.</p>
+            <a class="btn" href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Website besuchen</a>
+        </div>
+
+        <div class="card">
+            <h3>KeePass</h3>
+            <p>Ein kostenloser Passwortmanager, der deine Zugangsdaten lokal verschlüsselt speichern kann.</p>
+            <a class="btn" href="https://keepass.info/" target="_blank" rel="noopener noreferrer">Website besuchen</a>
+        </div>
+
+        <div class="card">
+            <h3>Have I Been Pwned</h3>
+            <p>Überprüfe, ob deine E-Mail-Adresse in bekannten Datenlecks aufgetaucht ist.</p>
+            <a class="btn" href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Website besuchen</a>
+        </div>
+    </div>
+</section>
+
+<section id="check" class="highlight">
+    <h2 class="section-title">🔎 Interaktiver Passwort-Check</h2>
+    <p class="subtitle">Teste die Eigenschaften eines Passworts direkt hier.</p>
+
+    <div class="tool-box">
+        <h3>Wie sicher ist dein Passwort?</h3>
+        <p>Gib ein Beispielpasswort ein, um eine Einschätzung zu erhalten.</p>
+
+        <input type="password" id="password"
+        placeholder="Passwort eingeben..."
+        autocomplete="off">
+
+        <button onclick="checkPassword()">Passwort prüfen</button>
+
+        <div class="bar">
+            <div id="strength"></div>
+        </div>
+
+        <p id="result"></p>
+        <p style="font-size:12px;color:#94a3b8;margin-top:15px;">
+            Hinweis: Verwende hier kein echtes Passwort!
+            Die Prüfung erfolgt lokal im Browser.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">📋 Deine Sicherheits-Checkliste</h2>
+    <p class="subtitle">Wie gut bist du bereits geschützt?</p>
+
+    <div class="tool-box">
+        <label><input type="checkbox"> Für jeden Account ein eigenes Passwort</label>
+        <label><input type="checkbox"> Lange und zufällige Passwörter</label>
+        <label><input type="checkbox"> Passwortmanager eingerichtet</label>
+        <label><input type="checkbox"> Zwei-Faktor-Authentifizierung aktiviert</label>
+        <label><input type="checkbox"> Vorsicht bei verdächtigen E-Mails</label>
+    </div>
+</section>
+
+<footer>
+    <p>🔐 PasswortSicher – Deine Sicherheit beginnt mit einem Passwort.</p>
+    <p>Ein Projekt zum Thema Informatik und digitale Sicherheit.</p>
+    <p>© 2026 | Sicher im Internet unterwegs</p>
+</footer>
+
+<script>
+function checkPassword() {
+    const password = document.getElementById("password").value;
+    const result = document.getElementById("result");
+    const strength = document.getElementById("strength");
+
+    let score = 0;
+
+    if (password.length >= 15) score++;
+    if (/[a-z]/.test(password)) score++;
+    if (/[A-Z]/.test(password)) score++;
+    if (/[0-9]/.test(password)) score++;
+    if (/[^A-Za-z0-9]/.test(password)) score++;
+
+    if (password.length === 0) {
+        result.textContent = "Bitte gib ein Passwort ein.";
+        strength.style.width = "0%";
+        return;
+    }
+
+    if (password.length < 8) score = Math.min(score, 1);
+
+    const percentage = score * 20;
+    strength.style.width = percentage + "%";
+
+    if (score <= 1) {
+        strength.style.background = "#ef4444";
+        result.textContent = "❌ Sehr schwach – erhöhe die Sicherheit!";
+    } else if (score <= 3) {
+        strength.style.background = "#f59e0b";
+        result.textContent = "⚠️ Mittelmäßig – es gibt Verbesserungspotenzial.";
+    } else {
+        strength.style.background = "#22c55e";
+        result.textContent = "✓ Gute Eigenschaften – achte weiterhin auf Einzigartigkeit!";
+    }
+}
+</script>
+
+</body>
+</html>
