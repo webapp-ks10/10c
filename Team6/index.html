@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soziale Netzwerke & Demokratie</title>
+  <style>
+    :root {
+      --dunkelblau: #17324d;
+      --blau: #2878a8;
+      --hellblau: #eaf5fb;
+      --text: #263442;
+      --grau: #667482;
+      --weiss: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #f4f7fa;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 64px 20px;
+      color: var(--weiss);
+      text-align: center;
+      background: linear-gradient(135deg, #17324d, #2878a8);
+    }
+
+    header .label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 12px;
+      border: 1px solid #ffffff70;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 auto 12px;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+    }
+
+    header p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #e2edf5;
+      font-size: 1.15rem;
+    }
+
+    main {
+      width: min(100% - 32px, 1000px);
+      margin: 36px auto;
+    }
+
+    section, .question {
+      margin-bottom: 24px;
+      padding: 26px;
+      border: 1px solid #e0e7ed;
+      border-radius: 14px;
+      background: var(--weiss);
+      box-shadow: 0 4px 14px #17324d0b;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--dunkelblau);
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--dunkelblau);
+      font-size: 1.1rem;
+    }
+
+    .themen {
+      border-left: 5px solid var(--blau);
+      background: var(--hellblau);
+    }
+
+    .karten {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .karte {
+      padding: 20px;
+      border: 1px solid #e0e7ed;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .symbol {
+      margin-bottom: 8px;
+      font-size: 1.7rem;
+    }
+
+    .beispiel {
+      padding: 20px;
+      border-radius: 10px;
+      background: #fff8e8;
+      border-left: 5px solid #e8a627;
+    }
+
+    .checkliste {
+      padding-left: 22px;
+    }
+
+    .checkliste li {
+      margin: 8px 0;
+    }
+
+    .frage {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .frage span {
+      color: var(--blau);
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .quiz-btn {
+      padding: 11px 18px;
+      border: 0;
+      border-radius: 8px;
+      color: white;
+      background: var(--blau);
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .quiz-btn:hover {
+      background: var(--dunkelblau);
+    }
+
+    #quizAntwort {
+      margin-top: 14px;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 24px 16px;
+      color: var(--grau);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 48px 18px;
+      }
+
+      section, .question {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="label">Thema 6 · Medienkompetenz</div>
+    <h1>Soziale Netzwerke &amp; Demokratie</h1>
+    <p>Meinung, Macht und Manipulation: Wie soziale Medien beeinflussen, was wir sehen und denken.</p>
+  </header>
+
+  <main>
+    <section class="themen">
+      <h2>Worum geht es?</h2>
+      <p>
+        Soziale Medien bringen Menschen und Ideen zusammen. Gleichzeitig können
+        Algorithmen unsere Sicht auf die Welt beeinflussen und falsche Informationen
+        besonders schnell verbreiten. Deshalb ist es wichtig, Inhalte kritisch zu prüfen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Leitfragen</h2>
+      <div class="frage"><span>›</span><div>Wie verbreiten sich Meinungen in sozialen Netzwerken?</div></div>
+      <div class="frage"><span>›</span><div>Was sind Filterblasen und Fake News?</div></div>
+      <div class="frage"><span>›</span><div>Wie kann ich kritisch mit Online-Informationen umgehen?</div></div>
+    </section>
+
+    <section>
+      <h2>Wichtige Begriffe</h2>
+      <div class="karten">
+        <article class="karte">
+          <div class="symbol">⚙️</div>
+          <h3>Algorithmus</h3>
+          <p>Ein Regelwerk, das entscheidet, welche Beiträge dir angezeigt werden – oft passend zu deinem bisherigen Verhalten.</p>
+        </article>
+
+        <article class="karte">
+          <div class="symbol">🫧</div>
+          <h3>Filterblase</h3>
+          <p>Wenn du vor allem Inhalte und Meinungen siehst, die zu deinen bisherigen Interessen oder Ansichten passen.</p>
+        </article>
+
+        <article class="karte">
+          <div class="symbol">🔎</div>
+          <h3>Desinformation</h3>
+          <p>Falsche oder irreführende Informationen, die absichtlich verbreitet werden, um Menschen zu täuschen oder zu beeinflussen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Beispiel: Ein Beitrag geht viral</h2>
+      <div class="beispiel">
+        <p><strong>Behauptung:</strong> „Ab morgen wird eine neue Regel eingeführt!“</p>
+        <p>Der Beitrag hat viele Likes und wird oft geteilt. Das beweist aber nicht, dass er wahr ist. Vielleicht fehlen wichtige Informationen oder die Behauptung stammt aus einer unzuverlässigen Quelle.</p>
+        <p><strong>Merke:</strong> Erst prüfen, dann teilen.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>So prüfst du Online-Informationen</h2>
+      <ol class="checkliste">
+        <li><strong>Quelle checken:</strong> Wer hat den Beitrag veröffentlicht?</li>
+        <li><strong>Datum beachten:</strong> Ist die Information aktuell und vollständig?</li>
+        <li><strong>Vergleichen:</strong> Berichten auch andere verlässliche Quellen darüber?</li>
+        <li><strong>Beweise suchen:</strong> Gibt es Quellen oder Daten für die Behauptung?</li>
+        <li><strong>Vor dem Teilen nachdenken:</strong> Könnte der Beitrag andere täuschen oder verletzen?</li>
+      </ol>
+    </section>
+
+    <section class="question">
+      <h2>Mini-Quiz</h2>
+      <p>Ein Beitrag hat sehr viele Likes. Bedeutet das automatisch, dass er zuverlässig ist?</p>
+      <button class="quiz-btn" onclick="zeigeAntwort()">Antwort anzeigen</button>
+      <p id="quizAntwort" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Kompetenzschwerpunkt</h2>
+      <p><strong>Kritisches Denken</strong> und die Verbindung von Technik und Gesellschaft: Wer beeinflusst, welche Informationen wir sehen – und wie können wir selbstbestimmt damit umgehen?</p>
+    </section>
+  </main>
+
+  <footer>
+    Denk kritisch. Prüfe Quellen. Teile verantwortungsvoll.
+  </footer>
+
+  <script>
+    function zeigeAntwort() {
+      document.getElementById("quizAntwort").textContent =
+        "Nein. Likes zeigen eine Reaktion – sie sind kein Beweis dafür, dass eine Information stimmt.";
+    }
+  </script>
+
+</body>
+</html>
